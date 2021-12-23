@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:elevation="10dp"
+        android:background="@color/white"
+       >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:paddingStart="10dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_arrow_back"
+            />
+
+             <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/FREE_MOCKWALA"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="@color/blue"/>
+    </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/toolbar"
+            android:background="#F5F5F5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/text_typing"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:text="Click Here to Start Typing Test"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/edt_typing"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:hint="Start Typing Here..."
+                android:textSize="18dp"
+                android:gravity="top"
+               android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/blue"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+               />
+
+        </LinearLayout>
+
+</RelativeLayout>

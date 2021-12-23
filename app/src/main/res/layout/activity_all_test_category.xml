@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown"
+    tools:context=".AllTestCategoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/bg_color"
+        tools:ignore="InvalidId">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:paddingStart="10dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+          />
+
+<!--        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="@color/white"-->/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/toolbar"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="20dp"
+        android:elevation="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/card_test">
+
+        <TextView
+            android:id="@+id/txt_testName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ques"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_marginStart="4dp"
+                android:text="Que"/>
+
+            <TextView
+                android:id="@+id/marks"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="15dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="15dp"
+                android:layout_marginStart="4dp"
+                android:gravity="center"
+                android:text="Marks"
+                 />
+
+            <TextView
+                android:id="@+id/time_min"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="15dp"
+               android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textSize="15dp"
+                android:layout_marginStart="4dp"
+                android:gravity="center"
+                android:text="Min"/>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/lightorange"
+            android:text="Continue"
+            android:textColor="@color/orange"
+            android:textSize="20dp"
+            app:cornerRadius="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textAllCaps="false"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

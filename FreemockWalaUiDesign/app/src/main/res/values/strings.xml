@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FreemockWalaUiDesign</string>
+
+    <string name="Not_A_Member_Ragister">Not A Member ?  <font color="#FF6200EE">Ragister</font></string>
+    <string name="please_enter_your_first_name">enter first name</string>
+    <string name="please_enter_your_last_name">enter your last name</string>
+    <string name="please_enter_your_Email">please enter your email</string>
+    <string name="enter_your_mobile_number">enter mobile number</string>
+    <string name="please_enter_password">please enter password</string>
+    <string name="please_enter_confirm_password">please enter confirm password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

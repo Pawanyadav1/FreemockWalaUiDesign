@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/homebar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/bg_color">
+
+
+        <ImageView
+            android:layout_width="29dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="60dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_search_24" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_notifications_24" />
+
+        <!-- <ImageView
+             android:id="@+id/logout"
+             android:layout_width="30dp"
+             android:layout_height="match_parent"
+             android:layout_marginEnd="30dp"
+             android:layout_alignParentEnd="true"
+             android:src="@drawable/ic_baseline_power_settings_new_24" />-->
+
+        <ImageView
+            android:id="@+id/img_navi"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_more_vert_25" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/homebar"
+        >
+
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:id="@+id/flipper"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_shape"
+            android:layout_gravity="center"/>
+
+        <!--<com.smarteist.autoimageslider.SliderView
+            android:id="@+id/showBanner"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:sliderStartAutoCycle="true"
+            android:layout_centerInParent="true"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            android:src="@drawable/online_test"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#08bd80"
+            app:sliderIndicatorUnselectedColor="#FF000000"
+            app:sliderScrollTimeInSec="1" />-->
+
+
+
+        <RelativeLayout
+            android:id="@+id/news"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_shape"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="2dp">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/practice" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="105dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Current Affairs"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="19dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Read daily news in 10 mins"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="49dp"
+                android:layout_alignParentEnd="true"
+                android:layout_height="match_parent"
+                android:src="@drawable/godetail" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/news"
+            android:id="@+id/youexam"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:paddingStart="10dp"
+                android:text="Your Exam"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/txt_show"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:paddingStart="20dp"
+                android:gravity="center"
+                android:text="See All"
+                android:textColor="@color/purple_500" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/txt_show"
+            android:id="@+id/rv_showexam"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

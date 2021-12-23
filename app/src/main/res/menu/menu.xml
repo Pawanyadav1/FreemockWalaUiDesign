@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item
+            android:iconTint="@color/white"
+            android:id="@+id/nev_changepwd"
+            android:icon="@drawable/ic_baseline_edit_24"
+            android:title="Change password"/>
+
+        <item
+            android:iconTint="@color/white"
+            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            android:checked="true"
+            android:id="@+id/nev_logout"
+            android:title="Logout"/>
+
+
+
+</menu>

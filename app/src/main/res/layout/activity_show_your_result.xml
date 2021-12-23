@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:id="@+id/RelativeResult"
+    tools:context=".ShowYourResultActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll_homebar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Your Result"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_retake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retake"
+            android:layout_gravity="end"
+            android:layout_alignParentEnd="true"
+            android:textAllCaps="false"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/darkbrown"
+            />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_homebar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/show_marks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_homebar"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/test_result"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Hi Vikram"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold|italic"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Your Rank  # 286525 "
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Out Of # 300876 Test takers"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="18dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="193dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="Cut Off Mask"
+                            android:textSize="15dp"
+                            android:textColor="@color/Red"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="60.50/100"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="195dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="Your Mask"
+                            android:textSize="15dp"
+                            android:textColor="@color/blue"
+                            android:gravity="center"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/give_mask"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:text=""
+                                android:textSize="15dp"
+                                android:textColor="@color/black"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/total_mask"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="30.5/ 100 " android:textColor="@color/black"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:weightSum="3"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="15dp">
+
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="start"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="Percentage"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:id="@+id/ing_percent"
+                            android:layout_width="match_parent"
+                            android:layout_height="73dp"
+                            android:gravity="center"
+                            android:src="@drawable/accuracy_img" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="Accuracy"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:id="@+id/img_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="69dp"
+                            android:gravity="center"
+                            android:src="@drawable/accuracy_img" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="Percentile"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+
+                        <ImageView
+                            android:id="@+id/img_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="73dp"
+                            android:gravity="center"
+                            android:src="@drawable/accuracy_img" />
+
+                    </LinearLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/show_marks"
+                android:background="@color/white"
+                app:tabTextColor="@color/black"
+                android:paddingStart="20dp"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/bg_color"
+                app:tabIndicatorHeight="4dp"
+                app:tabIndicatorColor="@color/bg_color">
+
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab1"
+                    android:textAllCaps="true"
+                    android:text="Solutions"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab2"
+                    android:textAllCaps="false"
+                    android:text="OverView"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab3"
+                    android:textAllCaps="false"
+                    android:textSize="12dp"
+                    android:text="My Performance Graph"/>
+
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/V_pager"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@+id/tablayout1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/white" />
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/bg_color"
+        android:backgroundTint="@color/white"
+        android:text="Done"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_test1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="20dp"
+        android:background="@drawable/rounded_shape">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_test"
+            android:layout_width="55dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:src="@drawable/ssc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="30dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Txt_test1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Ssc Gd Constable Mock Test"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Text_avl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Test"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/Txt_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hindi English"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"/>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:id="@+id/show_test"
+            android:layout_gravity="end|center_vertical"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

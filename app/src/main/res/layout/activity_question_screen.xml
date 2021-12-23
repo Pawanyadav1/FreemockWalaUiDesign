@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionScreenActivity">
+
+    <LinearLayout
+        android:id="@+id/homebar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/bg_color"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:id="@+id/back_btn"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/time_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text=""
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="13dp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text=" min "
+            android:layout_gravity="center_vertical"
+            android:textSize="14dp"
+            android:gravity="center" />
+
+
+        <TextView
+            android:id="@+id/test_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_out"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/homebar">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/brown">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_section"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="45dp"
+                    android:gravity="center"
+                    android:text="Question No. : " />
+
+                <TextView
+                    android:id="@+id/que_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:gravity="center"
+                    android:text="" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/marks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marks"
+            android:layout_below="@+id/section"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_marking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/marks"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/positive"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:gravity="center"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/bg_color"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/negetive"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="5dp"
+                android:text="-0.25"
+                android:textColor="@color/Red"/>
+
+
+        </LinearLayout>
+
+
+        <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_below="@+id/ll_marking">
+
+    <LinearLayout
+        android:layout_below="@+id/marks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/option"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+           android:elevation="20dp"
+            app:cardCornerRadius="5dp">
+            <TextView
+                android:id="@+id/txt_que"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:padding="5dp"
+                android:textSize="18dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/select_A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:elevation="15dp"
+            app:cardCornerRadius="10dp">
+
+
+            <RadioButton
+                android:id="@+id/select_a"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="A)" />
+
+            <TextView
+                android:id="@+id/choiceA"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="55dp"
+                android:text=""
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/select_B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+           android:elevation="15dp">
+
+            <RadioButton
+                android:id="@+id/select_b"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="B)"
+                android:textSize="20dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/choiceB"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="55dp"
+                android:gravity="center_vertical"
+                android:text=""/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/select_C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+           android:elevation="15dp">
+
+            <RadioButton
+                android:id="@+id/select_c"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="C)"
+                android:textSize="20dp"
+                android:gravity="center"
+               />
+
+            <TextView
+                android:id="@+id/choiceC"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text=""
+                android:gravity="center_vertical"
+                android:layout_marginStart="55dp"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/select_D"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+          android:elevation="15dp">
+            <RadioButton
+                android:id="@+id/select_d"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="D)"
+                android:textSize="20dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/choiceD"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text=""
+                android:gravity="center_vertical"
+                android:layout_marginStart="55dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clear_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Section"
+            app:cornerRadius="10dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="80dp"
+            android:backgroundTint="@color/darkbrown"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:layout_marginBottom="15dp"
+    android:orientation="horizontal">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/priview_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        android:text="Mark For Review &amp; Next"
+        android:backgroundTint="@color/Red"
+        android:layout_marginStart="11dp"
+        android:layout_gravity="start"
+        android:layout_marginEnd="50dp"
+        android:layout_weight="1"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+     />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save &amp; Next"
+        android:backgroundTint="@color/bg_color"
+        android:layout_gravity="right"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:textSize="12dp"
+        android:textAllCaps="false"
+        app:cornerRadius="10dp"/>
+
+</LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
